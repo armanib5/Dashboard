@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Private Dashboard</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Libre+Franklin:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<div class="bg"></div>
+<div class="page">
+  <div class="admintop">
+    <div class="logo">&#128274; Private Dashboard</div>
+    <div class="warn">Not linked from any public page &mdash; sign in with your BayPinned admin account.</div>
+  </div>
+
+  <div id="sbGate"></div>
+
+  <div id="loginWrap" class="adminwrap" style="display:none;max-width:420px;">
+    <div class="adminhint">Same login as map.board's <code>/admin/</code> &mdash; one account, both sites.</div>
+    <div class="formgrid">
+      <label>Email<input id="loginEmail" type="email" placeholder="you@example.com" autocomplete="username"></label>
+      <label>Password<input id="loginPass" type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="current-password"></label>
+    </div>
+    <div id="loginErr" style="color:#fca5a5;font-size:12.5px;margin-top:8px;display:none;"></div>
+    <button class="abtn green" id="loginBtn" style="margin-top:10px;">Sign In</button>
+  </div>
+
+  <div id="dashWrap" style="display:none;">
+    <div class="adminwrap hub">
+      <h1>Both Sites, One Place</h1>
+      <div class="sub">Signed in as <b id="whoami"></b> &middot; <a href="#" id="signOutBtn" style="color:var(--cl);">Sign out</a></div>
+
+      <div class="sectiontitle">Quick Add</div>
+      <div class="quickrow" id="quickAddRow"></div>
+      <div class="note">Flyers added on BayPinned's board and pins added on BayPinned SJ still save to that browser's local storage, not Supabase yet. Pins added via BayPinned's own /pins/ page ARE live already.</div>
+
+      <div class="sectiontitle">Manage Sites</div>
+      <div class="cardgrid" id="siteCards"></div>
+
+      <div class="sectiontitle">Private</div>
+      <div class="tabrow" style="margin:0 0 0;padding:0;">
+        <button class="tabbtn on" data-tab="reports">Event Reports</button>
+        <button class="tabbtn" data-tab="business">Business List</button>
+      </div>
+      <div class="adminwrap" style="padding-top:14px;">
+        <div id="tabContent"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="shared/supabase-config.js"></script>
+<script src="shared/supabase-client.js"></script>
+<script src="js/site-config.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
