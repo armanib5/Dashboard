@@ -1,20 +1,17 @@
-/* Fill in the real, live URLs for each site once you know where they're
-   hosted (GitHub Pages, Netlify, Vercel, a custom domain, whatever you
-   picked) - couldn't be guessed from the repos themselves, since neither
-   has a CNAME file, Pages workflow, or netlify/vercel config checked in.
-   Leave a value as "" and the Dashboard will show a "not set" notice
-   instead of a broken link. */
+/* Live URLs for each site - both confirmed reachable via GitHub Pages
+   (deploy-from-branch, no workflow file needed). Update here if either
+   site ever moves to a custom domain or different host. */
 var SITES = {
   baypinned: {
     label: "BayPinned (map.board)",
-    siteUrl: "",
-    adminUrl: "",
-    pinsUrl: "",
-    boardUrl: ""
+    siteUrl: "https://armanib5.github.io/Map.board/index.html",
+    adminUrl: "https://armanib5.github.io/Map.board/admin/index.html",
+    pinsUrl: "https://armanib5.github.io/Map.board/pins/index.html",
+    boardUrl: "https://armanib5.github.io/Map.board/board/index.html"
   },
   baypinnedSJ: {
     label: "BayPinned SJ (baypinnedmap1)",
-    siteUrl: "",
-    adminUrl: ""
+    siteUrl: "https://armanib5.github.io/Baypinnedmap1/index.html",
+    adminUrl: "https://armanib5.github.io/Baypinnedmap1/admin.html"
   }
 };

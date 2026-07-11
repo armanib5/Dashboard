@@ -8,16 +8,16 @@ exists in map.board's Supabase project — event reports and a business
 
 ## Setup
 
-1. `js/site-config.js` — fill in the real URLs for each site (siteUrl,
-   adminUrl, pinsUrl, boardUrl). Left blank on purpose: neither repo has
-   a CNAME file, GitHub Pages workflow, or Netlify/Vercel config checked
-   in, so there was no way to know where — or whether — they're actually
-   deployed. Until these are filled in, the corresponding buttons show
-   "(URL not set)" instead of a broken link.
-2. Sign in with the same admin account already created in map.board's
-   Supabase project (see `map.board/supabase/README.md` step 4) — this
-   dashboard reuses that project's URL/anon key (`shared/supabase-config.js`),
-   so it's one login for both.
+1. `js/site-config.js` — already filled in with both sites' live GitHub
+   Pages URLs (confirmed reachable). If either site ever moves host,
+   update the URLs here.
+2. Sign in with the one admin account created in map.board's Supabase
+   project (Authentication → Users → Add user, see
+   `map.board/supabase/README.md` step 4) — this dashboard reuses that
+   project's URL/anon key (`shared/supabase-config.js`), so it's one
+   login for both. Vendors/organizers never need an account — they
+   submit pins/flyers/listings anonymously and you approve/reject them
+   here or in map.board's own admin.
 
 ## What's live vs. not yet
 
